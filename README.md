@@ -80,7 +80,7 @@ make re     # Full rebuild
 
 ### Use of AI
 
-Claude (claude.ai) was used throughout this project for:
+AI was used throughout this project for:
 - **Explanations** — Understanding Docker concepts and the configuration of the different services (Nginx, PHP-FPM, MariaDB, WordPress).
 - **Debugging** — Solving configuration issues in scripts and Dockerfiles.
 
