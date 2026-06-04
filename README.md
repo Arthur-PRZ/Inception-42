@@ -1,8 +1,11 @@
 *This project has been created as part of the 42 curriculum by artperez.*
 
-# Inception
+# 🐳 Inception
 
-## Description
+A 42 project setting up a full infrastructure using **Docker** and **Docker Compose**.
+
+---
+## Introduction
 
 Inception is a project from the 42 curriculum. The goal is to set up a small infrastructure composed of different services running inside Docker containers, all orchestrated with Docker Compose.
 
@@ -13,6 +16,18 @@ The infrastructure includes:
 
 Each service runs in its own dedicated container, built from a custom Dockerfile based on the penultimate stable version of Debian or Alpine.
 
+### Key Concepts
+
+- **Docker** — containerization tool to isolate and run services independently
+- **Docker Compose** — orchestrates multiple containers from a single `docker-compose.yml`
+- **Nginx** — web server acting as a reverse proxy with TLS (HTTPS)
+- **MariaDB** — relational database storing WordPress data
+- **WordPress + PHP-FPM** — content management system running with FastCGI
+- **TLS** — encrypted HTTPS connection on port 443
+- **Docker Volumes** — persistent storage for database and WordPress files
+- **Docker Network** — isolated bridge network for inter-container communication
+
+---
 ### Use of Docker
 
 Instead of running services directly on a host machine, this project uses Docker to isolate each service in its own container. Each container is built from a custom Dockerfile and configured via environment variables. Docker Compose orchestrates all containers, networks, and volumes from a single `docker-compose.yml` file.
@@ -31,7 +46,7 @@ With Host Network, the container shares the host's network directly (no isolatio
 **Docker Volumes vs Bind Mounts**
 Bind Mounts link a specific folder from the host machine directly into the container. Docker Volumes are managed by Docker and stored in a dedicated location on the host. This project uses Docker Volumes for the MariaDB data and WordPress files to ensure data persists across container restarts, while keeping the data management under Docker's control.
 
-## Instructions
+## Usage
 
 ### Installation & Execution
 
@@ -85,3 +100,7 @@ AI was used throughout this project for:
 - **Debugging** — Solving configuration issues in scripts and Dockerfiles.
 
 AI was used as a learning and support tool, not to generate the project code directly.
+
+## Author
+
+Made by [Arthur-PRZ](https://github.com/Arthur-PRZ)
